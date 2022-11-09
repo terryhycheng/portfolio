@@ -1,13 +1,23 @@
-import React from "react";
+import Image from "next/image";
+import React, { FC } from "react";
 
-const ExpBlock = () => {
+interface Props {
+  duration: string;
+  company: string;
+  position: string;
+  imageUrl: string;
+}
+
+const ExpBlock: FC<Props> = ({ duration, company, position, imageUrl }) => {
   return (
-    <div className="flex items-center gap-6 shadow-md p-4 rounded-md">
-      <div className="bg-slate-400 w-14 h-14 rounded-full m-2"></div>
+    <div className="flex items-center gap-10 shadow-md px-8 py-4 rounded-md hover-effect ani">
+      <div className="flex relative w-20 h-10">
+        <Image alt="" src={imageUrl} layout="fill" objectFit="contain" />
+      </div>
       <div className="p-2">
-        <p className="text-sm">2020-2022 (2 years)</p>
-        <p className="font-bold">The University of Hong Kong</p>
-        <p className="text-sm">IT Officer - Multimedia Development Officer</p>
+        <p className="text-sm">{duration}</p>
+        <p className="font-bold">{company}</p>
+        <p className="text-sm italic opacity-50">{position}</p>
       </div>
     </div>
   );

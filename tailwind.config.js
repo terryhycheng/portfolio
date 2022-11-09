@@ -5,7 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "fugaz-one": ['"Fugaz One"', "cursive"],
+        "merriweather-sans": ['"Merriweather Sans"', "sans-serif"],
+      },
+    },
   },
   plugins: [],
-}
+};

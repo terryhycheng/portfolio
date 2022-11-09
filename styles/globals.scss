@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  --main-c: #467774;
+  --sec-c: #df605a;
+  --third-c: #f1e4d1;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 100;
+}
+
 .btn_outline {
-  @apply border-2 w-full p-2 rounded-md;
+  @apply border border-[color:var(--main-c)] text-main-c hover:text-[color:var(--sec-c)] hover:border-[color:var(--sec-c)] transition-all;
+}
+
+.text-main-c {
+  @apply text-[color:var(--main-c)];
+}
+
+.text-sec-c {
+  @apply text-[color:var(--sec-c)];
+}
+
+.text-third-c {
+  @apply text-[color:var(--third-c)];
+}
+
+.ani {
+  @apply transition-all duration-300;
+}
+
+.hover-effect {
+  @apply hover:bg-gray-100;
 }
